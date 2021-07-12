@@ -1,0 +1,29 @@
+
+{
+    "name": "mowmita/sp2",
+    "description": "This  package is integration with shurjoPay2",
+    "authors": [
+        {
+            "name": "Mowmita",
+            "email": "mowmita@shurjomukhi.com.bd"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "orchestra/testbench": "^3.8"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "mowmita\\sp2\\": "sp2/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "sp2\\Sp2ServiceProvider"
+            ]
+        }
+    }
+}
