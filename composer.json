@@ -16,7 +16,7 @@
 
     "autoload": {
         "psr-4": {
-            "mowmita\\sp2\\": "sp2/src"
+            "mowmita\\sp2\\": "src/"
         }
     },
     "extra": {
