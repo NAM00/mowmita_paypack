@@ -18,12 +18,6 @@
         "psr-4": {
             "mowmita\\sp2\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "sp2\\Sp2ServiceProvider"
-            ]
-        }
     }
+
 }
