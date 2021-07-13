@@ -36,8 +36,8 @@ class Sp2Controller extends Controller
 
         $response = $this->getUrl($info);
         $arr = json_decode($response);
-        print_r($arr);
-        exit();
+   /*     print_r($arr);
+        exit();*/
         $url = ($arr->checkout_url);
         return redirect($url);
         //print_r($url);
@@ -87,8 +87,7 @@ class Sp2Controller extends Controller
     public function getUrl($info) {
         $response=$this->getToken();
         $arr=json_decode($response);
-       // $tok=($arr->token);
-        $tok='eyJ0eXAiOc3MiOiJodHRwczpcL1wvZW5naW5lLnNodXJqb3BheW1lbnQuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI2MDgwMzU4LCJleHAiOjE2MjYwODM5NTgsIm5iZiI6MTYyNjA4MDM1OCwianRpIjoieW5jdUlZTmpMdU5wVXNMNCIsInN1YiI6MSwicHJ2IjoiODA1ZjM5ZWVmY2M2OGFmZDk4MjViNDEyMjdkYWQwYTA3NmM0OTc5MyJ9.e4wKU1oFrdXa1tq_yxcHi9rLT7rHr-ZHbI2wtNmaHts&';
+        $tok=($arr->token);
         $s_id=($arr->store_id);
 
         $info2=array(
@@ -96,8 +95,8 @@ class Sp2Controller extends Controller
             'store_id'=>$s_id);
         $final_array=array_merge($info2, $info);
         $bodyJson=json_encode($final_array);
-        print_r($bodyJson);
-        exit();
+      /*  print_r($bodyJson);
+        exit();*/
         $curl = curl_init();
 
         curl_setopt_array($curl, array(
